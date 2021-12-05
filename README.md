@@ -2,7 +2,7 @@
 
 ## Training:
  ```bash
-    sh submit.sh
+ sh submit.sh
  ```
  
  ## Generation:
