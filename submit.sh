@@ -1,0 +1,3 @@
+export PYTHONPATH=/data/home/user/MV-TF:$PYTHONPATH
+export TESTHOME=/data/home/user/MV-TF
+python -u $TESTHOME/thumt/bin/trainer.py --input $HOME/WMT14-ende/corpus.bpe32k.en.shuf $HOME/WMT14-ende/corpus.bpe32k.de.shuf --vocabulary $HOME/WMT14-ende/vocab.bpe.en.txt $HOME/WMT14-ende/vocab.bpe.de.txt --model add  --validation $HOME/WMT14-ende/newstest2013.bpe.en --references $HOME/WMT14-ende/newstest2013.tc.de --parameters batch_size=4096,update_cycle=2,eval_steps=2000,save_checkpoint_steps=1000,device_list=[0,1,2,3],attention_dropout=0.1,relu_dropout=0.1,residual_dropout=0.1,mode='all',heads=4,learning_rate=2,warmup_steps=8000,train_steps=100000
